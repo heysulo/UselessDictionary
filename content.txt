@@ -11,4 +11,5 @@ hey;used as a greeting or to begin a telephone conversation.
 house;the place where one lives permanently, especially as a member of a family or household.
 hound;a domesticated carnivorous mammal that typically has a long snout, an acute sense of smell, non-retractile claws, and a barking, howling, or whining voice.
 pussy;a small domesticated carnivorous mammal with soft fur, a short snout, and retractile claws. it is widely kept as a pet or for catching mice, and many breeds have been developed.
+humble;not so sure what this means
 rigid;solid, firm, and rigid, not easily broken, bent, or pierced.

@@ -189,8 +189,8 @@ public class UselessDictionary extends JFrame {
                     return;
                 }
             }
-            System.out.println("INFO : Saving Chanes Success!");
-            JOptionPane.showMessageDialog(null, "Changes Saved!");
+            System.out.println(getTime() +"INFO : Changes are saved for permanent effect.");
+            JOptionPane.showMessageDialog(null, "Changes are saved for permanent effect!");
             
         }
     }
