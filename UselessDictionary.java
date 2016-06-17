@@ -42,7 +42,7 @@ public class UselessDictionary extends JFrame {
 
     private void initComponents(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //default exit action
-        this.setSize(800,430);  //window size
+        this.setSize(800,440);  //window size
         this.setVisible(true);  //set visible at startup
         this.setTitle("Useless Dictionary");    //set name of the dictionary to the window title
         JPanel topPanel = new JPanel(); //new Jpanel for objects

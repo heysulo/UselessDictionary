@@ -80,11 +80,11 @@ public class BinarySearchTree {
                 System.out.println(getTime() +"INFO : " + "The word " + word + " deleted from the dictionary.");
                 JOptionPane.showMessageDialog(null, "The word " + word + " deleted from the dictionary.");
             }else if (rightChild){
-                parent.right = current.left;
+                parent.right = current.right;
                 System.out.println(getTime() +"INFO : " + "The word " + word + " deleted from the dictionary.");
                 JOptionPane.showMessageDialog(null, "The word " + word + " deleted from the dictionary.");
             }else{
-                parent.left = current.left;
+                parent.left = current.right;
                 System.out.println(getTime() +"INFO : " + "The word " + word + " deleted from the dictionary.");
                 JOptionPane.showMessageDialog(null, "The word " + word + " deleted from the dictionary.");
             }
@@ -94,11 +94,11 @@ public class BinarySearchTree {
                 System.out.println(getTime() +"INFO : " + "The word " + word + " deleted from the dictionary.");
                 JOptionPane.showMessageDialog(null, "The word " + word + " deleted from the dictionary.");
             }else if (rightChild){
-                parent.left = current.right;
+                parent.right = current.left;
                 System.out.println(getTime() +"INFO : " + "The word " + word + " deleted from the dictionary.");
                 JOptionPane.showMessageDialog(null, "The word " + word + " deleted from the dictionary.");
             }else{
-                parent.right = current.right;
+                parent.left = current.left;
                 System.out.println(getTime() +"INFO : " + "The word " + word + " deleted from the dictionary.");
                 JOptionPane.showMessageDialog(null, "The word " + word + " deleted from the dictionary.");
             }
