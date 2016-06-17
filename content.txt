@@ -1,15 +1,88 @@
-
-home;the place where one lives permanently, especially as a member of a family or household.
-cat;a small domesticated carnivorous mammal with soft fur, a short snout, and retractile claws. it is widely kept as a pet or for catching mice, and many breeds have been developed.
-apple;apple is a fruit
-dog;a domesticated carnivorous mammal that typically has a long snout, an acute sense of smell, non-retractile claws, and a barking, howling, or whining voice.
-hard;solid, firm, and rigid, not easily broken, bent, or pierced.
-firm;solid, firm, and rigid, not easily broken, bent, or pierced.
-hello;used as a greeting or to begin a telephone conversation.
-hi;used as a greeting or to begin a telephone conversation.
-hey;used as a greeting or to begin a telephone conversation.
-house;the place where one lives permanently, especially as a member of a family or household.
-hound;a domesticated carnivorous mammal that typically has a long snout, an acute sense of smell, non-retractile claws, and a barking, howling, or whining voice.
-pussy;a small domesticated carnivorous mammal with soft fur, a short snout, and retractile claws. it is widely kept as a pet or for catching mice, and many breeds have been developed.
-humble;not so sure what this means
-rigid;solid, firm, and rigid, not easily broken, bent, or pierced.
+Ameliorate ; make (something bad or unsatisfactory) better.
+Fierce ;having or displaying a violent or ferocious aggressiveness.
+Boisterous ;noisy, energetic, and cheerful.
+Ascertain ;find (something) out for certain, make sure of.
+Conspiracy ;a secret plan by a group to do something unlawful or harmful.
+Exacerbate ;make (a problem, bad situation, or negative feeling) worse.
+Executive ;a person or group of persons having administrative or supervisory authority in an organization.
+Constitution ;a set of fundamental principles or established precedents according to which a state or other organization is governed.
+Prophetic ;accurately predicting what will happen in the future.
+Confession ;the acknowledgment of one's sins (sinfulness) or wrongs.
+Normal ;conforming to the standard or the common type.
+Enthusiasm ;intense and eager enjoyment, interest, or approval.
+Virtual ;almost or nearly as described, but not completely or according to strict definition.
+Stewardess ;a woman flight attendant.
+Typical ;having the distinctive qualities of a particular type of person or thing.
+Consistent ;acting or done in the same way over time, especially so as to be fair or accurate.
+Deteriorate ;become progressively worse.
+Polemical ;of or involving strongly critical or disputatious writing or speech.
+Effective ;successful in producing a desired or intended result.
+Mitigate;make (something bad) less severe, serious, or painful.
+Fastidious ;very attentive to and concerned about accuracy and detail.
+Delicious ;highly pleasant to the taste.
+Curiosity ;a strong desire to know or learn something.
+Novel;a fictitious prose narrative of book length, typically representing character and action with some degree of realism.
+Bogus ;not genuine or true.
+Tasty ;having a pleasant, distinct flavour.
+Alleviate; make (suffering, deficiency, or a problem) less severe.
+Delightful;having the pleasant taste characteristic of sugar or honey, not salt, sour, or bitter
+Contemporary ;living or occurring at the same time.
+Obsolete ;no longer produced or used, out of date.
+Engage ;occupy or attract (someone's interest or attention).
+Interest;the feeling of wanting to know or learn about something or someone.
+Fresh ;not previously known or used, new or different.
+Yummy ;having a pleasant, distinct flavour.
+Hostess;a woman who receives or entertains guests. 
+Sweet;having the pleasant taste characteristic of sugar or honey, not salt, sour, or bitter.
+Fanciful ;over-imaginative and unrealistic.
+Tolerance ;the ability or willingness to tolerate the existence of opinions or behaviour that one dislikes or disagrees with.
+Frugality ;the quality of being economical with money or food, thriftiness.
+Stinginess;unwilling to share, give, or spend possessions or money
+Overshadow ;tower above and cast a shadow over.
+Temperance ;abstinence from alcoholic drink.
+Tumultuous ;making an uproar or loud, confused noise.
+Passionate;having, showing, or caused by strong feelings or beliefs.
+Eminence ;fame or acknowledged superiority within a particular sphere.
+Notoriety ;the state of being famous or well known for some bad quality or deed.
+Precarious ;not securely held or in position, dangerously likely to fall or collapse.
+Orthodox;following or conforming to the traditional or generally accepted rules or beliefs of a religion, philosophy, or practice.
+Eccentric; unconventional and slightly strange.
+Amorous ;showing, feeling, or relating to sexual desire.
+Conventional ;based on or in accordance with what is generally done or believed.
+Innovation;the action or process of innovating.
+Acerbic ;(especially of a comment or style of speaking) sharp and forthright.
+Meticulous ;showing great attention to detail, very careful and precise.
+Restive ;(of a person) unable to remain still, silent, or submissive, especially because of boredom or dissatisfaction.
+Placid;not easily upset or excited.
+Mysterious; difficult or impossible to understand, explain, or identify.
+Fortuitous ;happening by chance rather than intention.
+Indecorous ;not in keeping with good taste and propriety, improper.
+Rational;based on or in accordance with reason or logic.
+Flexibility ;the quality of bending easily without breaking.
+Diffidence ;modesty or shyness resulting from a lack of self-confidence.
+Prolixity ;extended to great, unnecessary, or tedious length, long and wordy
+Austerity;sternness or severity of manner or attitude
+Taciturnity ;the trait of reticence, of seeming aloof and uncommunicativ
+Volubility ;the quality of talking fluently, readily, or incessantly, talkativeness
+Pellucid ;easily understood, lucid.
+Complementary;combining in such a way as to enhance or emphasize the qualities of each other or another
+Bolster ;a long, thick pillow that is placed under other pillows for support.
+Aloof ;not friendly or forthcoming, cool and distant.
+Placid ;not easily upset or excited
+Skittish; nervous or excitable, easily scared.
+Endeavor ;try hard to do or achieve something.
+Conference; a dessert pear of a firm-fleshed variety.
+Research ;the systematic investigation into and study of materials and sources in order to establish facts and reach new conclusions.
+Cursory;hasty and therefore not thorough or detailed.
+Conversation ;a talk, especially an informal one, between two or more people, in which news and ideas are exchanged.
+Dialogue ;a talk, especially an informal one, between two or more people, in which news and ideas are exchanged.
+Concisely ;expressing or covering much in few words
+Reference;the action of mentioning or alluding to something.
+Bibliographical; A list of the written sources of information on a subject
+Advisor ;a person who gives advice in a particular field.
+Criticism ;the expression of disapproval of someone or something on the basis of perceived faults or mistakes.
+Critical;expressing adverse or disapproving comments or judgements.
+Hard ;solid, firm, and rigid, not easily broken, bent, or pierced.
+Argument ;an exchange of diverging or opposite views, typically a heated or angry one.
+Galaxy ;a system of millions or billions of stars, together with gas and dust, held together by gravitational attraction.
+Majesty;impressive beauty, scale, or stateliness.
