@@ -6,7 +6,10 @@ import java.util.Dictionary;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.io.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import static java.util.Collections.list;
+import java.util.Date;
 import java.util.Scanner;
 
 public class UselessDictionary extends JFrame {
@@ -86,7 +89,7 @@ public class UselessDictionary extends JFrame {
         tabDictionary = new JPanel();
         tabDictionary.setLayout( null );
 
-        
+        //INIT OBJECTS AND SETBOUNDS
         lblGuidText_td.setBounds( 10, 5, 150, 20 );
         tabDictionary.add( lblGuidText_td );
                 
@@ -139,7 +142,7 @@ public class UselessDictionary extends JFrame {
         lstSynonims.setFixedCellWidth(150);
         tabDictionary.add( lstSynonims );
         
-        
+        //ADD DEFAULT ACTIONS PERFORMED ON CLICK FOR THE BUTTONS
         event_buttonSearch ebd = new event_buttonSearch();
         btnSearchDic.addActionListener(ebd);
         
@@ -157,6 +160,7 @@ public class UselessDictionary extends JFrame {
     }
     public class event_btnDelete implements ActionListener {
         public void actionPerformed(ActionEvent e){
+            //the conent are trimmed and switched to lower case to increase hit making.
             dict.deletenode(txtSearchDic.getText().trim().toLowerCase());
             
         }
@@ -165,30 +169,33 @@ public class UselessDictionary extends JFrame {
     
     public class event_btnSave implements ActionListener {
         public void actionPerformed(ActionEvent e){
-            String export = dict.exportTree();
-            if (export==null){
+            String export = dict.exportTree(); //get the current bbst as a string
+            if (export==null){ //check fi the string is empty
                 JOptionPane.showMessageDialog(null, "Nothing to save.");
                 return;
             }
+            //save the conent to the local file
             FileWriter output=null;
             try {
                 output = new FileWriter("content.txt");
                 output.write(export);
             } catch (IOException ex) {
-                System.out.println(ex);
+                System.out.println(getTime() +"ERRR : " + ex.getMessage());
             } finally {
                 try {
                     output.close();
                 } catch (Exception es) {
-                    System.out.println(es.getMessage());
+                    System.out.println(getTime() +"ERRR : " + es.getMessage());
+                    return;
                 }
             }
+            System.out.println("INFO : Saving Chanes Success!");
             JOptionPane.showMessageDialog(null, "Changes Saved!");
             
         }
     }
     
-    
+    //add a button to the binary search tree.
     public class event_btnAdd implements ActionListener {
         public void actionPerformed(ActionEvent e){
             addToDict(txtSearchDic.getText().trim(), lblOutput_td.getText().trim());
@@ -196,29 +203,29 @@ public class UselessDictionary extends JFrame {
         }
     }
     
+    //search the bst for a word
     public class event_buttonSearch implements ActionListener {
         public void actionPerformed(ActionEvent e){
-            listModel.removeAllElements();
-            Node xs = dict.find(txtSearchDic.getText().trim().toLowerCase());
-            if (xs==null){
+            listModel.removeAllElements(); //clear all elements in the synnonimgs list
+            Node xs = dict.find(txtSearchDic.getText().trim().toLowerCase()); //the conent are trimmed and switched to lower case to increase hit making.
+            if (xs==null){ //null means word not found
                 lblOutput_td.setText("The searched word '"+ txtSearchDic.getText() + "' was not found inside the dictionary");
             }else{
                 lblOutput_td.setText(xs.definition);
-                
                 listModel = dict.findSyn(xs.definition);
                 listModel.removeElement(xs.word);
-                lstSynonims.setModel(listModel);
-                
+                lstSynonims.setModel(listModel);               
             }
         }
     }
-        
+    
+    //Create tab page 3
     public void createPage3(){
         tabAbout = new JPanel();
         tabAbout.setLayout( null );
         
 
-        JLabel lblGuidText_syn = new JLabel( "<html><h1>Useless Dictionary</h1><p>Sulochana Kodituwakku<br>2014/CS/066<br>14000662</p></html>" );
+        JLabel lblGuidText_syn = new JLabel( "<html><h1>Useless Dictionary</h1><p>Sulochana Kodituwakku<br>2014/CS/066<br>14000662</p></html>" ); //html can be used in JLables
         lblGuidText_syn.setHorizontalAlignment(JLabel.LEFT);
         lblGuidText_syn.setVerticalAlignment(JLabel.TOP);
         lblGuidText_syn.setBounds( 10, 200, 750, 380 );
@@ -227,6 +234,8 @@ public class UselessDictionary extends JFrame {
         btnImport.setBounds(10,10,125,25);
         tabAbout.add(btnImport);
         
+        
+        //set conlick event for Import button
         event_buttonImport ebd = new event_buttonImport();
         btnImport.addActionListener(ebd);
     }
@@ -234,84 +243,93 @@ public class UselessDictionary extends JFrame {
     public class event_buttonImport implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            Boolean isfail = false;            
-            JFileChooser c = new JFileChooser();
+            Boolean isfail = false;            //import fail status
+            JFileChooser c = new JFileChooser(); //open file dialog box
             int rVal = c.showOpenDialog(UselessDictionary.this);
-            if (rVal == JFileChooser.APPROVE_OPTION) {
-
+            if (rVal == JFileChooser.APPROVE_OPTION) { //if user select a file and press ok
                 FileReader input = null;
                 Scanner in = null;
-                try {
-                    input = new FileReader(c.getSelectedFile().getAbsolutePath());
+                try { //try reading the file
+                    input = new FileReader(c.getSelectedFile().getAbsolutePath()); 
                     in = new Scanner(input);
-                    int sum = 0;
                     while (in.hasNext() ){
                         String dd[];
-                        dd = in.nextLine().split(";");
-                        System.out.println("Adding the word " + dd[0]);
-                        addToDict(dd[0],dd[1]);
-                        sum++;
+                        String line = in.nextLine();
+                        if (line.contains(";")) { //theline is valid if there is a ';' which seperates the word and the definition
+                            dd = line.split(";"); //split by ;
+                            System.out.println(getTime() +"INFO : " + "Adding the word '" + dd[0].toUpperCase() +"'"); //verbrose
+                            addToDict(dd[0], dd[1]);
+                        }
                     }
 
                 } catch (IOException xe) {
-                    System.out.println(xe);
+                    System.out.println(getTime() +"ERRR : " + xe.getMessage());
                 }
                 
                 try {
                     input.close();
                 } catch (Exception de) {
                     isfail = true;
-                    System.out.println("File close failed.");
+                    System.out.println(getTime() +"ERRR : " + "File close failed.");
                 }
                 if (isfail == true) {
                     JOptionPane.showMessageDialog(null, "Error occured while impoting words from the external source.");
-                    System.out.println("Error occured while impoting words from the external source.");
+                    System.out.println(getTime() +"ERRR : " + "Error occured while impoting words from the external source.");
                 } else {
                     JOptionPane.showMessageDialog(null, "Words successfully imported from the external source.");
-                    System.out.println("Words successfully imported from the external source.");
+                    System.out.println(getTime() +"INFO : " + "Words successfully imported from the external source.");
                 }
 
+            }else{
+                System.out.println(getTime() +"WARN : " + "User canceled the import process.");
             }
 
         }
     }
     
     public void addToDict(String word,String def){
-        dict.insert(word.trim().toLowerCase(), def.trim().toLowerCase());
+        dict.insert(word.trim().toLowerCase(), def.trim().toLowerCase()); //the conent are trimmed and switched to lower case to increase hit making.
         
     }
 
 
     public static void main(String[] args) {
-        UselessDictionary frmMain = new UselessDictionary();
+        System.out.println( getTime() + "INFO : Starting up the dictionary.");
+        UselessDictionary frmMain = new UselessDictionary(); //init new dictioanry obj
         frmMain.setVisible(true);
         FileReader input = null;
         Scanner in = null;
+        //load the words from the local file
         try {
             input = new FileReader("content.txt");
             in = new Scanner(input);
             while (in.hasNextLine()) {
                 String line = in.nextLine();
-                System.out.println(line);
                 if (line.contains(";")){
                     String dd[];
                     dd = line.split(";");
-                    System.out.println("Adding the word " + dd[0] + " to the tree.");
+                    System.out.println(getTime() +"INFO : Adding the word '" + dd[0].toUpperCase() + "' to the tree.");
                     dict.insert(dd[0].trim().toLowerCase(), dd[1].trim().toLowerCase());
                 }
                 
             }
         } catch (IOException e) {
-            System.out.println(e);
+            System.out.println(getTime() +"ERRR : " + e);
         } finally {
             try {
                 input.close();
-                System.out.println("Startup import finished.");
+                System.out.println(getTime() +"INFO : Startup import finished.");
       
             } catch (Exception e) {
-                System.out.println(e);
+                System.out.println(getTime() +"ERRR : " + e);
             }
         }
+    }
+    
+    public static String getTime(){
+        DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+        Date date = new Date();
+        return dateFormat.format(date) + "   ";
     }
 
 }
